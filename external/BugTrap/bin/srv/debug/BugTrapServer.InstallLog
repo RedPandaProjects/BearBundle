@@ -1,0 +1,16 @@
+﻿Выполняется установка сборки 'E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.exe
+   logfile = E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.InstallLog
+Устанавливается служба BugTrap Server...
+Создается исходный EventLog BugTrap Server в журнале Application...
+Выполняется откат для сборки 'E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.exe
+   logfile = E:\GameDev\BearSDK\projects\components\BugTrap\bin\srv\debug\BugTrapServer.InstallLog
+Восстанавливается исходное состояние журнала событий для источника BugTrap Server.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.

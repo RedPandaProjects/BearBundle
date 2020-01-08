@@ -1,0 +1,49 @@
+﻿  autofit.c
+  bdf.c
+  cff.c
+  ftbase.c
+  ftbitmap.c
+  ftcache.c
+  ftfstype.c
+  ftgasp.c
+  ftglyph.c
+  ftgzip.c
+  ftinit.c
+  ftlzw.c
+  ftstroke.c
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\base\ftobjs.c(4670): warning C4702: недостижимый код
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\base\ftobjs.c(4671): warning C4702: недостижимый код
+  ftsystem.c
+  smooth.c
+  ftbbox.c
+  ftfntfmt.c
+  ftmm.c
+  ftpfr.c
+  ftsynth.c
+  fttype1.c
+  ftwinfnt.c
+  ftlcdfil.c
+  ftgxval.c
+  ftotval.c
+  ftpatent.c
+  pcf.c
+  pfr.c
+  psaux.c
+  pshinter.c
+  psmodule.c
+  raster.c
+  sfnt.c
+  truetype.c
+  type1.c
+  type1cid.c
+  type42.c
+  winfnt.c
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1697): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1715): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1721): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1727): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1733): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1739): warning C4244: =: преобразование "FT_UInt" в "short", возможна потеря данных (компилируется исходный файл ..\..\..\src\truetype\truetype.c)
+e:\gamedev\bearsdk\projects\components\freetype-2.6\src\truetype\ttgload.c(1776): warning C4701: использована потенциально неинициализированная локальная переменная "outline"
+  ftdebug.c
+  freetype.vcxproj -> E:\GameDev\BearSDK\projects\components\freetype-2.6\builds\windows\vc2017\.\..\..\..\objs\vc2010\Win32\freetype26d.lib
