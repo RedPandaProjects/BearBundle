@@ -1,0 +1,3 @@
+[submodule "bearcore"]
+	path = bearcore
+	url = https://github.com/BearIvan/bearcore
