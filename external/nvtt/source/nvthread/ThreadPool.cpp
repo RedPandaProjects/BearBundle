@@ -1,9 +1,9 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
-#include "nvthread\ThreadPool.h"
-#include "nvthread\Mutex.h"
-#include "nvthread\Thread.h"
-#include "nvthread\Atomic.h"
+#include "ThreadPool.h"
+#include "Mutex.h"
+#include "Thread.h"
+#include "Atomic.h"
 
 #include "nvcore/Utils.h"
 #include "nvcore/StrLib.h"
@@ -21,7 +21,7 @@ extern HTELEMETRY tmContext;
 using namespace nv;
 
 #if PROTECT_THREAD_POOL 
-AutoPtr<Mutex > s_pool_mutex; //("thread pool");
+Mutex s_pool_mutex("thread pool");
 #endif
 
 AutoPtr<ThreadPool> s_pool;
@@ -29,8 +29,7 @@ AutoPtr<ThreadPool> s_pool;
 
 /*static*/ void ThreadPool::setup(uint workerCount, bool useThreadAffinity, bool useCallingThread) {
 #if PROTECT_THREAD_POOL 
-	if (!s_pool_mutex.ptr())s_pool_mutex = new Mutex("thread pool");
-    Lock<Mutex> lock(*s_pool_mutex);
+    Lock<Mutex> lock(s_pool_mutex);
 #endif
 
     s_pool = new ThreadPool(workerCount, useThreadAffinity, useCallingThread);
@@ -38,9 +37,8 @@ AutoPtr<ThreadPool> s_pool;
 
 /*static*/ ThreadPool * ThreadPool::acquire()
 {
-#if PROTECT_THREAD_POOL 	
-	if (!s_pool_mutex.ptr())s_pool_mutex = new Mutex("thread pool");
-    s_pool_mutex->lock();    // @@ If same thread tries to lock twice, this should assert.
+#if PROTECT_THREAD_POOL 
+    s_pool_mutex.lock();    // @@ If same thread tries to lock twice, this should assert.
 #endif
 
     if (s_pool == NULL) {
@@ -59,8 +57,7 @@ AutoPtr<ThreadPool> s_pool;
     s_pool->wait();
 
 #if PROTECT_THREAD_POOL 
-	if (!s_pool_mutex.ptr())s_pool_mutex =new Mutex("thread pool");
-    s_pool_mutex->unlock();
+    s_pool_mutex.unlock();
 #endif
 }
 

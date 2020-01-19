@@ -1,4 +1,4 @@
-﻿#ifndef NV_CORE_H
+#ifndef NV_CORE_H
 #error "Do not include this file directly."
 #endif
 
@@ -19,7 +19,7 @@
 #endif
 
 #define NV_FASTCALL		__attribute__((fastcall))
-#define NV_FORCEINLINE	inline 
+#define NV_FORCEINLINE	inline
 #define NV_DEPRECATED   __attribute__((deprecated))
 
 #if __GNUC__ > 2

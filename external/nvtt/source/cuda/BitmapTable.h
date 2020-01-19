@@ -1,4 +1,4 @@
-﻿
+
 
 /*
 static void doPrecomputation()

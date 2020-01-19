@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_IMAGE_IMAGEIO_H
@@ -6,7 +6,7 @@
 
 #include "nvimage.h"
 
-#include "../nvcore/StrLib.h"
+#include "nvcore/StrLib.h"
 
 
 namespace nv

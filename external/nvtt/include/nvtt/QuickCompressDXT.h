@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -25,7 +25,7 @@
 #ifndef NV_TT_QUICKCOMPRESSDXT_H
 #define NV_TT_QUICKCOMPRESSDXT_H
 
-#include "../nvimage/nvimage.h"
+#include <nvimage/nvimage.h>
 
 namespace nv
 {

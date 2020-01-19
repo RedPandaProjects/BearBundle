@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -25,10 +25,10 @@
 #ifndef NV_TT_CONTEXT_H
 #define NV_TT_CONTEXT_H
 
-#include "../nvcore/Ptr.h"
+#include "nvcore/Ptr.h"
 
-#include "../nvtt/Compressor.h"
-#include "../cuda/CudaCompressorDXT.h"
+#include "nvtt/Compressor.h"
+#include "cuda/CudaCompressorDXT.h"
 #include "nvtt.h"
 #include "TaskDispatcher.h"
 

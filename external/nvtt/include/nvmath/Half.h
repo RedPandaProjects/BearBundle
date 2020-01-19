@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #ifndef NV_MATH_HALF_H
 #define NV_MATH_HALF_H
 

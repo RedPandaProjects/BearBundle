@@ -1,10 +1,10 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_THREAD_H
 #define NV_THREAD_H
 
-#include "../nvcore/nvcore.h"
+#include "nvcore/nvcore.h"
 
 // Function linkage
 #if NVTHREAD_SHARED

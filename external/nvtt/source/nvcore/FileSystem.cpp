@@ -1,6 +1,6 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
-#include "nvcore\FileSystem.h"
+#include "FileSystem.h"
 
 #if NV_OS_WIN32
 #define _CRT_NONSTDC_NO_WARNINGS // _chdir is defined deprecated, but that's a bug, chdir is deprecated, _chdir is *not*.

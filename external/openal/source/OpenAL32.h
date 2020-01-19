@@ -34,89 +34,89 @@
 #include "openal\al.h"
 
 // ALAPI
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_ENABLE)(ALenum capability);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DISABLE)(ALenum capability);
-typedef ALAPI ALboolean      (ALAPIENTRY *ALAPI_IS_ENABLED)(ALenum capability);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_ENABLE)(ALenum capability);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DISABLE)(ALenum capability);
+typedef  ALboolean      (ALAPIENTRY *ALAPI_IS_ENABLED)(ALenum capability);
 
-typedef ALAPI const ALchar*  (ALAPIENTRY *ALAPI_GET_STRING)(ALenum param);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BOOLEANV)(ALenum param, ALboolean* data);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_INTEGERV)(ALenum param, ALint* data);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_FLOATV)(ALenum param, ALfloat* data);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_DOUBLEV)(ALenum param, ALdouble* data);
-typedef ALAPI ALboolean      (ALAPIENTRY *ALAPI_GET_BOOLEAN)(ALenum param);
-typedef ALAPI ALint          (ALAPIENTRY *ALAPI_GET_INTEGER)(ALenum param);
-typedef ALAPI ALfloat        (ALAPIENTRY *ALAPI_GET_FLOAT)(ALenum param);
-typedef ALAPI ALdouble       (ALAPIENTRY *ALAPI_GET_DOUBLE)(ALenum param);
+typedef  const ALchar*  (ALAPIENTRY *ALAPI_GET_STRING)(ALenum param);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BOOLEANV)(ALenum param, ALboolean* data);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_INTEGERV)(ALenum param, ALint* data);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_FLOATV)(ALenum param, ALfloat* data);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_DOUBLEV)(ALenum param, ALdouble* data);
+typedef  ALboolean      (ALAPIENTRY *ALAPI_GET_BOOLEAN)(ALenum param);
+typedef  ALint          (ALAPIENTRY *ALAPI_GET_INTEGER)(ALenum param);
+typedef  ALfloat        (ALAPIENTRY *ALAPI_GET_FLOAT)(ALenum param);
+typedef  ALdouble       (ALAPIENTRY *ALAPI_GET_DOUBLE)(ALenum param);
 
-typedef ALAPI ALenum         (ALAPIENTRY *ALAPI_GET_ERROR)(ALvoid);
+typedef  ALenum         (ALAPIENTRY *ALAPI_GET_ERROR)(ALvoid);
 
-typedef ALAPI ALboolean      (ALAPIENTRY *ALAPI_IS_EXTENSION_PRESENT)(const ALchar* ename);
-typedef ALAPI ALvoid*        (ALAPIENTRY *ALAPI_GET_PROC_ADDRESS)(const ALchar* fname);
-typedef ALAPI ALenum         (ALAPIENTRY *ALAPI_GET_ENUM_VALUE)(const ALchar* ename);
+typedef  ALboolean      (ALAPIENTRY *ALAPI_IS_EXTENSION_PRESENT)(const ALchar* ename);
+typedef  ALvoid*        (ALAPIENTRY *ALAPI_GET_PROC_ADDRESS)(const ALchar* fname);
+typedef  ALenum         (ALAPIENTRY *ALAPI_GET_ENUM_VALUE)(const ALchar* ename);
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENERF)(ALenum param, ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENER3F)(ALenum param, ALfloat v1, ALfloat v2, ALfloat v3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENERFV)(ALenum param, const ALfloat* values);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENERI)(ALenum param, ALint value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENER3I)( ALenum param, ALint value1, ALint value2, ALint value3 );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_LISTENERIV)( ALenum param, const ALint* values );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERF)(ALenum param, ALfloat* value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENER3F)(ALenum param, ALfloat* v1, ALfloat* v2, ALfloat* v3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERFV)(ALenum param, ALfloat* values);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERI)(ALenum param, ALint* value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENER3I)( ALenum param, ALint *value1, ALint *value2, ALint *value3 );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERIV)( ALenum param, ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENERF)(ALenum param, ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENER3F)(ALenum param, ALfloat v1, ALfloat v2, ALfloat v3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENERFV)(ALenum param, const ALfloat* values);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENERI)(ALenum param, ALint value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENER3I)( ALenum param, ALint value1, ALint value2, ALint value3 );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_LISTENERIV)( ALenum param, const ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERF)(ALenum param, ALfloat* value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENER3F)(ALenum param, ALfloat* v1, ALfloat* v2, ALfloat* v3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERFV)(ALenum param, ALfloat* values);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERI)(ALenum param, ALint* value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENER3I)( ALenum param, ALint *value1, ALint *value2, ALint *value3 );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_LISTENERIV)( ALenum param, ALint* values );
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GEN_SOURCES)(ALsizei n, ALuint* sourceNames);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DELETE_SOURCES)(ALsizei n, const ALuint* sourceNames);
-typedef ALAPI ALboolean      (ALAPIENTRY *ALAPI_IS_SOURCE)(ALuint id);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCEF)(ALuint sourceName, ALenum param, ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE3F)(ALuint sourceName, ALenum param, ALfloat v1, ALfloat v2, ALfloat v3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCEFV)(ALuint sourceName, ALenum param, const ALfloat* values);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCEI)(ALuint sourceName, ALenum param, ALint value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE3I)( ALuint sid, ALenum param, ALint value1, ALint value2, ALint value3 );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCEIV)( ALuint sid, ALenum param, const ALint* values );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEF)(ALuint sourceName, ALenum param, ALfloat* value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCE3F)(ALuint sourceName, ALenum param, ALfloat* v1, ALfloat* v2, ALfloat* v3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEFV)(ALuint sourceName, ALenum param, const ALfloat* values);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEI)(ALuint sourceName, ALenum param, ALint* value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCE3I)( ALuint sid, ALenum param, ALint* value1, ALint* value2, ALint* value3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEIV)( ALuint sid, ALenum param, ALint* values );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PLAYV)(ALsizei n, const ALuint* sources);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_STOPV)(ALsizei n, const ALuint* sources);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_REWINDV)(ALsizei n, const ALuint* sources);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PAUSEV)(ALsizei n, const ALuint* sources);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PLAY)(ALuint sourceName);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_STOP)(ALuint sourceName);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_REWIND)(ALuint sourceName);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PAUSE)(ALuint sourceName);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GEN_SOURCES)(ALsizei n, ALuint* sourceNames);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DELETE_SOURCES)(ALsizei n, const ALuint* sourceNames);
+typedef  ALboolean      (ALAPIENTRY *ALAPI_IS_SOURCE)(ALuint id);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCEF)(ALuint sourceName, ALenum param, ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE3F)(ALuint sourceName, ALenum param, ALfloat v1, ALfloat v2, ALfloat v3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCEFV)(ALuint sourceName, ALenum param, const ALfloat* values);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCEI)(ALuint sourceName, ALenum param, ALint value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE3I)( ALuint sid, ALenum param, ALint value1, ALint value2, ALint value3 );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCEIV)( ALuint sid, ALenum param, const ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEF)(ALuint sourceName, ALenum param, ALfloat* value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCE3F)(ALuint sourceName, ALenum param, ALfloat* v1, ALfloat* v2, ALfloat* v3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEFV)(ALuint sourceName, ALenum param, const ALfloat* values);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEI)(ALuint sourceName, ALenum param, ALint* value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCE3I)( ALuint sid, ALenum param, ALint* value1, ALint* value2, ALint* value3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_SOURCEIV)( ALuint sid, ALenum param, ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PLAYV)(ALsizei n, const ALuint* sources);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_STOPV)(ALsizei n, const ALuint* sources);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_REWINDV)(ALsizei n, const ALuint* sources);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PAUSEV)(ALsizei n, const ALuint* sources);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PLAY)(ALuint sourceName);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_STOP)(ALuint sourceName);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_REWIND)(ALuint sourceName);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_PAUSE)(ALuint sourceName);
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_QUEUE_BUFFERS)(ALuint sourceName, ALsizei n, const ALuint* bufferNames);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SOURCE_UNQUEUE_BUFFERS)(ALuint sourceName, ALsizei n, ALuint* bufferNames);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_QUEUE_BUFFERS)(ALuint sourceName, ALsizei n, const ALuint* bufferNames);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SOURCE_UNQUEUE_BUFFERS)(ALuint sourceName, ALsizei n, ALuint* bufferNames);
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GEN_BUFFERS)(ALsizei n, ALuint* bufferNames);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DELETE_BUFFERS)(ALsizei n, const ALuint* bufferNames);
-typedef ALAPI ALboolean      (ALAPIENTRY *ALAPI_IS_BUFFER)(ALuint bufferName);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFER_DATA)(ALuint bufferName, ALenum format, const ALvoid* data, ALsizei size, ALuint freq);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GEN_BUFFERS)(ALsizei n, ALuint* bufferNames);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DELETE_BUFFERS)(ALsizei n, const ALuint* bufferNames);
+typedef  ALboolean      (ALAPIENTRY *ALAPI_IS_BUFFER)(ALuint bufferName);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFER_DATA)(ALuint bufferName, ALenum format, const ALvoid* data, ALsizei size, ALuint freq);
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFERF)( ALuint bid, ALenum param, ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFER3F)( ALuint bid, ALenum param, ALfloat value1, ALfloat value2, ALfloat value3 );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFERFV)( ALuint bid, ALenum param, const ALfloat* values );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFERI)( ALuint bid, ALenum param, ALint value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFER3I)( ALuint bid, ALenum param, ALint value1, ALint value2, ALint value3 );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_BUFFERIV)( ALuint bid, ALenum param, const ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFERF)( ALuint bid, ALenum param, ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFER3F)( ALuint bid, ALenum param, ALfloat value1, ALfloat value2, ALfloat value3 );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFERFV)( ALuint bid, ALenum param, const ALfloat* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFERI)( ALuint bid, ALenum param, ALint value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFER3I)( ALuint bid, ALenum param, ALint value1, ALint value2, ALint value3 );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_BUFFERIV)( ALuint bid, ALenum param, const ALint* values );
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERF)( ALuint bid, ALenum param, ALfloat* value );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFER3F)( ALuint bid, ALenum param, ALfloat* value1, ALfloat* value2, ALfloat* value3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERFV)( ALuint bid, ALenum param, ALfloat* values );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERI)( ALuint bid, ALenum param, ALint* value );
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFER3I)( ALuint bid, ALenum param, ALint* value1, ALint* value2, ALint* value3);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERIV)( ALuint bid, ALenum param, ALint* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERF)( ALuint bid, ALenum param, ALfloat* value );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFER3F)( ALuint bid, ALenum param, ALfloat* value1, ALfloat* value2, ALfloat* value3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERFV)( ALuint bid, ALenum param, ALfloat* values );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERI)( ALuint bid, ALenum param, ALint* value );
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFER3I)( ALuint bid, ALenum param, ALint* value1, ALint* value2, ALint* value3);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_GET_BUFFERIV)( ALuint bid, ALenum param, ALint* values );
 
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DOPPLER_FACTOR)(ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DOPPLER_VELOCITY)(ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_SPEED_OF_SOUND)(ALfloat value);
-typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_DISTANCE_MODEL)(ALenum value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DOPPLER_FACTOR)(ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DOPPLER_VELOCITY)(ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_SPEED_OF_SOUND)(ALfloat value);
+typedef  ALvoid         (ALAPIENTRY *ALAPI_DISTANCE_MODEL)(ALenum value);
 
 typedef struct ALAPI_FXN_TABLE_STRUCT
 {
@@ -212,31 +212,31 @@ typedef struct ALAPI_FXN_TABLE_STRUCT
 typedef struct ALCdevice_struct ALCdevice;
 typedef struct ALCcontext_struct ALCcontext;
 
-typedef ALCAPI ALCcontext* (ALCAPIENTRY *ALCAPI_CREATE_CONTEXT)(ALCdevice* device, const ALint* attrList);
-typedef ALCAPI ALboolean   (ALCAPIENTRY *ALCAPI_MAKE_CONTEXT_CURRENT)(ALCcontext* context);
-typedef ALCAPI ALvoid      (ALCAPIENTRY *ALCAPI_PROCESS_CONTEXT)(ALCcontext* context);
-typedef ALCAPI ALCvoid     (ALCAPIENTRY *ALCAPI_SUSPEND_CONTEXT)(ALCcontext* context);
-typedef ALCAPI ALvoid      (ALCAPIENTRY *ALCAPI_DESTROY_CONTEXT)(ALCcontext* context);
-typedef ALCAPI ALCcontext* (ALCAPIENTRY *ALCAPI_GET_CURRENT_CONTEXT)(ALvoid);
-typedef ALCAPI ALCdevice*  (ALCAPIENTRY *ALCAPI_GET_CONTEXTS_DEVICE)(ALCcontext* context);
+typedef  ALCcontext* (ALCAPIENTRY *ALCAPI_CREATE_CONTEXT)(ALCdevice* device, const ALint* attrList);
+typedef  ALboolean   (ALCAPIENTRY *ALCAPI_MAKE_CONTEXT_CURRENT)(ALCcontext* context);
+typedef  ALvoid      (ALCAPIENTRY *ALCAPI_PROCESS_CONTEXT)(ALCcontext* context);
+typedef  ALCvoid     (ALCAPIENTRY *ALCAPI_SUSPEND_CONTEXT)(ALCcontext* context);
+typedef  ALvoid      (ALCAPIENTRY *ALCAPI_DESTROY_CONTEXT)(ALCcontext* context);
+typedef  ALCcontext* (ALCAPIENTRY *ALCAPI_GET_CURRENT_CONTEXT)(ALvoid);
+typedef  ALCdevice*  (ALCAPIENTRY *ALCAPI_GET_CONTEXTS_DEVICE)(ALCcontext* context);
 
-typedef ALCAPI ALCdevice*  (ALCAPIENTRY *ALCAPI_OPEN_DEVICE)(const ALCchar* deviceName);
-typedef ALCAPI ALCboolean  (ALCAPIENTRY *ALCAPI_CLOSE_DEVICE)(ALCdevice* device);
+typedef  ALCdevice*  (ALCAPIENTRY *ALCAPI_OPEN_DEVICE)(const ALCchar* deviceName);
+typedef  ALCboolean  (ALCAPIENTRY *ALCAPI_CLOSE_DEVICE)(ALCdevice* device);
 
-typedef ALCAPI ALenum      (ALCAPIENTRY *ALCAPI_GET_ERROR)(ALCdevice* device);
+typedef  ALenum      (ALCAPIENTRY *ALCAPI_GET_ERROR)(ALCdevice* device);
 
-typedef ALCAPI ALboolean   (ALCAPIENTRY *ALCAPI_IS_EXTENSION_PRESENT)(ALCdevice* device, const ALCchar* eName);
-typedef ALCAPI ALvoid*     (ALCAPIENTRY *ALCAPI_GET_PROC_ADDRESS)(ALCdevice* device, const ALCchar* fName);
-typedef ALCAPI ALenum      (ALCAPIENTRY *ALCAPI_GET_ENUM_VALUE)(ALCdevice* device, const ALCchar* eName);
+typedef  ALboolean   (ALCAPIENTRY *ALCAPI_IS_EXTENSION_PRESENT)(ALCdevice* device, const ALCchar* eName);
+typedef  ALvoid*     (ALCAPIENTRY *ALCAPI_GET_PROC_ADDRESS)(ALCdevice* device, const ALCchar* fName);
+typedef  ALenum      (ALCAPIENTRY *ALCAPI_GET_ENUM_VALUE)(ALCdevice* device, const ALCchar* eName);
 
-typedef ALCAPI const ALCchar*  (ALCAPIENTRY *ALCAPI_GET_STRING)(ALCdevice* device, ALenum param);
-typedef ALCAPI ALvoid          (ALCAPIENTRY *ALCAPI_GET_INTEGERV)(ALCdevice* device, ALenum param, ALsizei size, ALint* data);
+typedef  const ALCchar*  (ALCAPIENTRY *ALCAPI_GET_STRING)(ALCdevice* device, ALenum param);
+typedef  ALvoid          (ALCAPIENTRY *ALCAPI_GET_INTEGERV)(ALCdevice* device, ALenum param, ALsizei size, ALint* data);
 
-typedef ALCAPI ALCdevice * (ALCAPIENTRY *ALCAPI_CAPTURE_OPEN_DEVICE)( const ALCchar *devicename, ALCuint frequency, ALCenum format, ALCsizei buffersize );
-typedef ALCAPI ALCboolean  (ALCAPIENTRY *ALCAPI_CAPTURE_CLOSE_DEVICE)( ALCdevice *device );
-typedef ALCAPI void        (ALCAPIENTRY *ALCAPI_CAPTURE_START)( ALCdevice *device );
-typedef ALCAPI void        (ALCAPIENTRY *ALCAPI_CAPTURE_STOP)( ALCdevice *device );
-typedef ALCAPI void        (ALCAPIENTRY *ALCAPI_CAPTURE_SAMPLES)( ALCdevice *device, ALCvoid *buffer, ALCsizei samples );
+typedef  ALCdevice * (ALCAPIENTRY *ALCAPI_CAPTURE_OPEN_DEVICE)( const ALCchar *devicename, ALCuint frequency, ALCenum format, ALCsizei buffersize );
+typedef  ALCboolean  (ALCAPIENTRY *ALCAPI_CAPTURE_CLOSE_DEVICE)( ALCdevice *device );
+typedef  void        (ALCAPIENTRY *ALCAPI_CAPTURE_START)( ALCdevice *device );
+typedef  void        (ALCAPIENTRY *ALCAPI_CAPTURE_STOP)( ALCdevice *device );
+typedef  void        (ALCAPIENTRY *ALCAPI_CAPTURE_SAMPLES)( ALCdevice *device, ALCvoid *buffer, ALCsizei samples );
 
 typedef struct ALCAPI_FXN_TABLE_STRUCT
 {

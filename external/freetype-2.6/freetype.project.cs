@@ -10,5 +10,12 @@ public class freetype :Project
 			LibrariesPath.Public.Add(Path.Combine(ProjectPath,"objs","vc2017","x64"));
 		else 
 			LibrariesPath.Public.Add(Path.Combine(ProjectPath,"objs","vc2017","Win32"));
+		if (BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.Win64
+		|| BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.Win32)
+		{
+			LibrariesStatic.Public.Add("freetype26.lib");
+		}
 	}
-} 
+		
+
+}

@@ -3,11 +3,13 @@
     {
       "name": "MinGW",
       "includePath": [
-        "D:/GameDev/BearSDK/projects/bear/bearredner/bearrender_null/source",
-        "D:/GameDev/BearSDK/projects/bear/bearcore/include"
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearredner/bearrender_null/source",
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearcore/include"
       ],
       "defines": [
-        "BEAR_RENDER_NULL_EXPORTS",
+        "LIB",
+        "MAIN_PROJECT_NAME=\"\"",
+        "PROJECT_OUT=\"BEAR_RENDER_NULL\"",
         "WINDOWS",
         "LIB",
         "_LIB",
@@ -17,7 +19,7 @@
         "_DEBUG",
         "GCC"
       ],
-      "compilerPath": "C:/Program Files/mingw-w64/mingw64/bin/g++.exe",
+      "compilerPath": "C:/Program Files/mingw-w64/x86_64/mingw64/bin/g++.exe",
       "cStandard": "c11",
       "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64"
@@ -25,11 +27,13 @@
     {
       "name": "MinGW",
       "includePath": [
-        "D:/GameDev/BearSDK/projects/bear/bearredner/bearrender_null/source",
-        "D:/GameDev/BearSDK/projects/bear/bearcore/include"
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearredner/bearrender_null/source",
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearcore/include"
       ],
       "defines": [
-        "BEAR_RENDER_NULL_EXPORTS",
+        "LIB",
+        "MAIN_PROJECT_NAME=\"\"",
+        "PROJECT_OUT=\"BEAR_RENDER_NULL\"",
         "WINDOWS",
         "LIB",
         "_LIB",
@@ -39,7 +43,7 @@
         "DEBUG",
         "GCC"
       ],
-      "compilerPath": "C:/Program Files/mingw-w64/mingw64/bin/g++.exe",
+      "compilerPath": "C:/Program Files/mingw-w64/x86_64/mingw64/bin/g++.exe",
       "cStandard": "c11",
       "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64"
@@ -47,11 +51,13 @@
     {
       "name": "MinGW",
       "includePath": [
-        "D:/GameDev/BearSDK/projects/bear/bearredner/bearrender_null/source",
-        "D:/GameDev/BearSDK/projects/bear/bearcore/include"
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearredner/bearrender_null/source",
+        "D:/GameDev/BearSDK/projects/bear_bundle/bearcore/include"
       ],
       "defines": [
-        "BEAR_RENDER_NULL_EXPORTS",
+        "LIB",
+        "MAIN_PROJECT_NAME=\"\"",
+        "PROJECT_OUT=\"BEAR_RENDER_NULL\"",
         "WINDOWS",
         "LIB",
         "_LIB",
@@ -60,7 +66,7 @@
         "NDEBUG",
         "GCC"
       ],
-      "compilerPath": "C:/Program Files/mingw-w64/mingw64/bin/g++.exe",
+      "compilerPath": "C:/Program Files/mingw-w64/x86_64/mingw64/bin/g++.exe",
       "cStandard": "c11",
       "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64"

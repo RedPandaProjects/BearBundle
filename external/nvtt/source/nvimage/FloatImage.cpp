@@ -1,13 +1,14 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvimage\FloatImage.h"
-#include "nvimage\Filter.h"
-#include "nvimage\Image.h"
-#include "nvimage\FloatImage.h"
+#include "FloatImage.h"
+#include "Filter.h"
+#include "Image.h"
+
 #include "nvmath/Color.h"
 #include "nvmath/Vector.inl"
 #include "nvmath/Matrix.inl"
 #include "nvmath/ftoi.h"
+#include "nvmath/Gamma.h"
 
 #include "nvcore/Utils.h" // max
 #include "nvcore/Ptr.h"
@@ -15,8 +16,8 @@
 #include "nvcore/Array.inl"
 
 #include <math.h>
-#include <string.h> // memset, memcpy#
-#include "nvcore\ptr.h"
+#include <string.h> // memset, memcpy
+
 
 using namespace nv;
 
@@ -243,13 +244,29 @@ void FloatImage::clamp(uint baseComponent, uint num, float low, float high)
 /// From gamma to linear space.
 void FloatImage::toLinear(uint baseComponent, uint num, float gamma /*= 2.2f*/)
 {
-    exponentiate(baseComponent, num, gamma);
+    if (gamma == 2.2f) {
+        for (uint c = 0; c < num; c++) {
+            float * ptr = this->channel(baseComponent + c);
+
+            powf_11_5(ptr, ptr, m_pixelCount);
+        }
+    } else {
+        exponentiate(baseComponent, num, gamma);
+    }
 }
 
 /// From linear to gamma space.
 void FloatImage::toGamma(uint baseComponent, uint num, float gamma /*= 2.2f*/)
 {
-    exponentiate(baseComponent, num, 1.0f/gamma);
+    if (gamma == 2.2f) {
+        for (uint c = 0; c < num; c++) {
+            float * ptr = this->channel(baseComponent + c);
+
+            powf_5_11(ptr, ptr, m_pixelCount);
+        }
+    } else {
+        exponentiate(baseComponent, num, 1.0f/gamma);
+    }
 }
 
 /// Exponentiate the elements of the image.

@@ -53,6 +53,9 @@
 
 // Errors
 #define _FACDD  0x876
+#ifdef MAKE_DDHRESULT
+#undef MAKE_DDHRESULT
+#endif
 #define MAKE_DDHRESULT( code )  MAKE_HRESULT( 1, _FACDD, code )
 
 enum _D3DX10_ERR {

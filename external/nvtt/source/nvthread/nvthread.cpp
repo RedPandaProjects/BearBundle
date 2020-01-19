@@ -1,11 +1,11 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Castaño <castano@gmail.com>
 
-#include "nvthread\nvthread.h"
+#include "nvthread.h"
 
-#include "nvthread\Thread.h"
+#include "Thread.h"
 
 #if NV_OS_WIN32
-#include "nvthread\Win32.h"
+#include "Win32.h"
 #elif NV_OS_UNIX
 #include <sys/types.h>
 #include <sys/sysctl.h>
@@ -33,7 +33,11 @@ typedef BOOL(WINAPI *LPFN_GSI)(LPSYSTEM_INFO);
 typedef BOOL(WINAPI *LPFN_ISWOW64PROCESS) (HANDLE, PBOOL);
 
 static bool isWow64() {
-    LPFN_ISWOW64PROCESS fnIsWow64Process = (LPFN_ISWOW64PROCESS)GetProcAddress(GetModuleHandle(TEXT("kernel32")),"IsWow64Process");
+#ifdef UNICODE
+    LPFN_ISWOW64PROCESS fnIsWow64Process = (LPFN_ISWOW64PROCESS)GetProcAddress( GetModuleHandle(L"kernel32"), "IsWow64Process");
+#else
+    LPFN_ISWOW64PROCESS fnIsWow64Process = (LPFN_ISWOW64PROCESS)GetProcAddress(GetModuleHandle("kernel32"), "IsWow64Process");
+#endif
 
     BOOL wow64 = FALSE;
 
@@ -98,7 +102,7 @@ uint nv::processorCount() {
     // set the mib for hw.ncpu
     mib[0] = CTL_HW;
 
-#if NV_OS_OPENBSD
+#if NV_OS_OPENBSD || NV_OS_FREEBSD
     mib[1] = HW_NCPU;
 #else
     mib[1] = HW_AVAILCPU;
@@ -192,7 +196,7 @@ uint nv::logicalProcessorCount() {
 }
 
 
-#if NV_OS_WIN32
+#if NV_OS_WIN32&&!NV_OS_MINGW
 
 struct LOGICALPROCESSORDATA
 {

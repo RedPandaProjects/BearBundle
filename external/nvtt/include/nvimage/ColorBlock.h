@@ -1,11 +1,11 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_IMAGE_COLORBLOCK_H
 #define NV_IMAGE_COLORBLOCK_H
 
-#include "../nvmath/Color.h"
-#include "../nvmath/Vector.h"
+#include "nvmath/Color.h"
+#include "nvmath/Vector.h"
 
 namespace nv
 {

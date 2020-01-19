@@ -1,4 +1,4 @@
-﻿
+
 #include "nvimage.h"
 
 

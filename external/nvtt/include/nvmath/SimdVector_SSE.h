@@ -1,4 +1,4 @@
-﻿/* -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
 
 	Copyright (c) 2006 Simon Brown                          si@sjbrown.co.uk
 
@@ -26,7 +26,7 @@
 #ifndef NV_SIMD_VECTOR_SSE_H
 #define NV_SIMD_VECTOR_SSE_H
 
-#include "../nvcore/Memory.h"
+#include "nvcore/Memory.h"
 
 #include <xmmintrin.h>
 #if (NV_USE_SSE > 1)

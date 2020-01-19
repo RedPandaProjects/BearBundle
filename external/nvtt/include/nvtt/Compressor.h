@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -26,7 +26,7 @@
 #define NVTT_COMPRESSOR_H
 
 #include "nvtt.h"
-#include "../nvcore/nvcore.h" // uint
+#include "nvcore/nvcore.h" // uint
 
 namespace nv
 {

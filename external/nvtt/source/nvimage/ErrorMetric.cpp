@@ -1,7 +1,7 @@
-﻿
-#include "nvimage\ErrorMetric.h"
-#include "nvimage\FloatImage.h"
-#include "nvimage\Filter.h"
+
+#include "ErrorMetric.h"
+#include "FloatImage.h"
+#include "Filter.h"
 
 #include "nvmath/Matrix.h"
 #include "nvmath/Vector.inl"

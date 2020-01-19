@@ -1,14 +1,14 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #ifndef NV_IMAGE_FLOATIMAGE_H
 #define NV_IMAGE_FLOATIMAGE_H
 
 #include "nvimage.h"
 
-#include "../nvmath/nvmath.h" // lerp
+#include "nvmath/nvmath.h" // lerp
 
-#include "../nvcore/Debug.h"
-#include "../nvcore/Utils.h" // clamp
+#include "nvcore/Debug.h"
+#include "nvcore/Utils.h" // clamp
 
 #include <stdlib.h> // abs
 

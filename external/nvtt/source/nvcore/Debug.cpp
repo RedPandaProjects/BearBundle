@@ -1,10 +1,10 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
-#include "nvcore\Debug.h"
-#include "nvcore\Array.inl"
-#include "nvcore\StrLib.h" // StringBuilder
+#include "Debug.h"
+#include "Array.inl"
+#include "StrLib.h" // StringBuilder
 
-#include "nvcore\StdStream.h" // fileOpen
+#include "StdStream.h" // fileOpen
 
 #include <stdlib.h>
 
@@ -70,7 +70,12 @@
 #include <libdbg.h>
 #endif
 
+#ifdef NV_OS_MINGW
+#define NV_USE_SEPARATE_THREAD 0
+#else
 #define NV_USE_SEPARATE_THREAD 1
+#endif
+
 
 
 using namespace nv;
@@ -942,7 +947,7 @@ int nvAbort(const char * exp, const char * file, int line, const char * func/*=N
 // Abnormal termination. Create mini dump and output call stack.
 void debug::terminate(int code)
 {
-#if NV_OS_WIN32 && NV_CC_MSVC
+#if NV_OS_WIN32 && !NV_OS_MINGW
     EnterCriticalSection(&s_handler_critical_section);
 
     writeMiniDump(NULL);
@@ -1053,7 +1058,7 @@ void debug::resetAssertHandler()
     s_assert_handler = NULL;
 }
 
-#if NV_OS_WIN32&& NV_CC_MSVC
+#if NV_OS_WIN32
 #if NV_USE_SEPARATE_THREAD
 
 static void initHandlerThread()

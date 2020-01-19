@@ -11,7 +11,7 @@ public class vulkan :Project
 			BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.MinGW)
 		{
 			string path_lib="win32";
-			if(BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.Win64)
+			if(BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.Win64||BearBuildTool.Config.Global.Platform == BearBuildTool.Config.Platform.MinGW)
 				path_lib="win64";
 			LibrariesPath.Public.Add(Path.Combine(ProjectPath,"lib",path_lib));
 			LibrariesStatic.Public.Add("vulkan-1.lib");

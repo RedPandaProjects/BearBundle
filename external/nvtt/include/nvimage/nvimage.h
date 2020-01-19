@@ -1,12 +1,12 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_IMAGE_H
 #define NV_IMAGE_H
 
-#include "../nvcore/nvcore.h"
-#include "../nvcore/Debug.h" // nvDebugCheck
-#include "../nvcore/Utils.h" // isPowerOfTwo
+#include "nvcore/nvcore.h"
+#include "nvcore/Debug.h" // nvDebugCheck
+#include "nvcore/Utils.h" // isPowerOfTwo
 
 // Function linkage
 #if NVIMAGE_SHARED

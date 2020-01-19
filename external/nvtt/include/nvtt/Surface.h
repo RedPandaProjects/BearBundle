@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -27,11 +27,11 @@
 
 #include "nvtt.h"
 
-#include "../nvcore/RefCounted.h"
-#include "../nvcore/Ptr.h"
+#include "nvcore/RefCounted.h"
+#include "nvcore/Ptr.h"
 
-#include "../nvimage/Image.h"
-#include "../nvimage/FloatImage.h"
+#include "nvimage/Image.h"
+#include "nvimage/FloatImage.h"
 
 namespace nvtt
 {

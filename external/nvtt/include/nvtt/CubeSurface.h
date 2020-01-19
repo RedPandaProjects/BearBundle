@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -27,13 +27,13 @@
 #include "nvtt.h"
 #include "Surface.h"
 
-#include "../nvimage/FloatImage.h"
+#include "nvimage/FloatImage.h"
 
-#include "../nvmath/Vector.h"
+#include "nvmath/Vector.h"
 
-#include "../nvcore/RefCounted.h"
-#include "../nvcore/Ptr.h"
-#include "../nvcore/Array.h"
+#include "nvcore/RefCounted.h"
+#include "nvcore/Ptr.h"
+#include "nvcore/Array.h"
 
 
 namespace nvtt

@@ -1,5 +1,5 @@
-﻿
-#include "nvtt\SingleColorLookup.h"
+
+#include "SingleColorLookup.h"
 
 #include "nvcore/Debug.h"
 

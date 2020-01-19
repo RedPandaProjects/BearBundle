@@ -1,7 +1,7 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvimage\Image.h"
-#include "nvimage\ImageIO.h"
+#include "Image.h"
+#include "ImageIO.h"
 
 #include "nvmath/Color.h"
 

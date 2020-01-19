@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -22,20 +22,20 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvtt\CompressorDX9.h"
-#include "nvtt\QuickCompressDXT.h"
-#include "nvtt\OptimalCompressDXT.h"
-#include "nvtt\CompressionOptions.h"
-#include "nvtt\OutputOptions.h"
-#include "nvtt\ClusterFit.h"
-#include "nvtt\CompressorDXT1.h"
-#include "nvtt\CompressorDXT5_RGBM.h"
+#include "CompressorDX9.h"
+#include "QuickCompressDXT.h"
+#include "OptimalCompressDXT.h"
+#include "CompressionOptions.h"
+#include "OutputOptions.h"
+#include "ClusterFit.h"
+#include "CompressorDXT1.h"
+#include "CompressorDXT5_RGBM.h"
 
 // squish
-#include "../squish/colourset.h"
-#include "../squish/weightedclusterfit.h"
+#include "squish/colourset.h"
+#include "squish/weightedclusterfit.h"
 
-#include "nvtt\nvtt.h"
+#include "nvtt.h"
 
 #include "nvimage/Image.h"
 #include "nvimage/ColorBlock.h"

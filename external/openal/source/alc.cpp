@@ -19,9 +19,10 @@
  */
 #ifdef WINDOWS
 #pragma warning(disable:4005 4702 4189 4100 4129)
+#endif
 #undef UNICODE
 #undef _UNICODE
-#endif
+
 #ifndef PROJECT_OUT
 #define PROJECT_OUT ""
 #endif
@@ -55,7 +56,8 @@
 #define _realloc_dbg(p,s,x,f,l)  realloc(p,s)
 #endif
 #include <objbase.h>
-#ifndef __MINGW32__
+#ifndef MINGW
+inline LPSTR T2A(LPTSTR lp) { return const_cast<char*>(lp); }
 #else
 #define T2A(x) x
 #endif
@@ -63,7 +65,7 @@
 
 #include "OpenAL32.h"
 
-inline LPSTR T2A(LPTSTR lp) { return lp; }
+
 //*****************************************************************************
 //*****************************************************************************
 //
@@ -399,13 +401,13 @@ ALvoid BuildDeviceSpecifierList()
 							dll = LoadLibrary(searchName);
 							if(dll)
 							{
-								alcOpenDeviceFxn = (ALCAPI_OPEN_DEVICE)GetProcAddress(dll, "alcOpenDevice");
-								alcCreateContextFxn = (ALCAPI_CREATE_CONTEXT)GetProcAddress(dll, "alcCreateContext");
-								alcMakeContextCurrentFxn = (ALCAPI_MAKE_CONTEXT_CURRENT)GetProcAddress(dll, "alcMakeContextCurrent");
-								alcGetStringFxn = (ALCAPI_GET_STRING)GetProcAddress(dll, "alcGetString");
-								alcDestroyContextFxn = (ALCAPI_DESTROY_CONTEXT)GetProcAddress(dll, "alcDestroyContext");
-								alcCloseDeviceFxn = (ALCAPI_CLOSE_DEVICE)GetProcAddress(dll, "alcCloseDevice");
-								alcIsExtensionPresentFxn = (ALCAPI_IS_EXTENSION_PRESENT)GetProcAddress(dll, "alcIsExtensionPresent");
+								alcOpenDeviceFxn = reinterpret_cast<ALCAPI_OPEN_DEVICE> (GetProcAddress(dll, "alcOpenDevice"));
+								alcCreateContextFxn = reinterpret_cast<ALCAPI_CREATE_CONTEXT>(GetProcAddress(dll, "alcCreateContext"));
+								alcMakeContextCurrentFxn = reinterpret_cast<ALCAPI_MAKE_CONTEXT_CURRENT>(GetProcAddress(dll, "alcMakeContextCurrent"));
+								alcGetStringFxn = reinterpret_cast<ALCAPI_GET_STRING>(GetProcAddress(dll, "alcGetString"));
+								alcDestroyContextFxn = reinterpret_cast<ALCAPI_DESTROY_CONTEXT>(GetProcAddress(dll, "alcDestroyContext"));
+								alcCloseDeviceFxn = reinterpret_cast<ALCAPI_CLOSE_DEVICE>(GetProcAddress(dll, "alcCloseDevice"));
+								alcIsExtensionPresentFxn = reinterpret_cast<ALCAPI_IS_EXTENSION_PRESENT>(GetProcAddress(dll, "alcIsExtensionPresent"));
 
 								if ((alcOpenDeviceFxn != 0) &&
 									(alcCreateContextFxn != 0) &&

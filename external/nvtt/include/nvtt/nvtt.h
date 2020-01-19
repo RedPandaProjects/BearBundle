@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -102,8 +102,8 @@ namespace nvtt
         Format_DXT1n,   // Not supported.
         Format_CTX1,    // Not supported.
 
-        Format_BC6,// Not supported.
-        Format_BC7,// Not supported.
+        Format_BC6,
+        Format_BC7,
 
         Format_BC3_RGBM,    // 
 
@@ -380,6 +380,8 @@ namespace nvtt
     // (New in NVTT 2.1)
     struct TaskDispatcher
     {
+        virtual ~TaskDispatcher() {}
+
         virtual void dispatch(Task * task, void * context, int count) = 0;
     };
 

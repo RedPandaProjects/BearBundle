@@ -1,6 +1,6 @@
-﻿// This code is in the public domain -- jim@tilander.org
+// This code is in the public domain -- jim@tilander.org
 
-#include "nvimage\ColorSpace.h"
+#include "ColorSpace.h"
 
 #include "nvimage/Image.h"
 #include "nvmath/Color.h"

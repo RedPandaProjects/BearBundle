@@ -817,5 +817,8 @@
     #define _Outptr_ 
 #endif
 
-
+#ifdef MSVC
 #define NVAPI_INTERFACE extern __success(return == NVAPI_OK) NvAPI_Status __cdecl
+#else
+#define NVAPI_INTERFACE extern NvAPI_Status 
+#endif

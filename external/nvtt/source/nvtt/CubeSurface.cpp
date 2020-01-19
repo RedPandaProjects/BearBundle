@@ -1,4 +1,4 @@
-ï»¿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -21,8 +21,8 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvtt\CubeSurface.h"
-#include "nvtt\Surface.h"
+#include "CubeSurface.h"
+#include "Surface.h"
 
 #include "nvimage/DirectDrawSurface.h"
 
@@ -1005,9 +1005,9 @@ void CubeSurface::sky(float turbidity, float albedo[3], float solarElevation) {
 
     // 700 nm (red), 546.1 nm (green) and 435.8 nm (blue).
     float channel_center[3] = {
-        700,    // Red 620â€“740,
-        546.1,  // Green 520â€“570,
-        435.8,  // Blue 450â€“490,
+        700,    // Red 620–740,
+        546.1,  // Green 520–570,
+        435.8,  // Blue 450–490,
     };
 
     // @@ For each pixel:

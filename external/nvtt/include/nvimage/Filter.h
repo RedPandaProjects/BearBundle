@@ -1,11 +1,11 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_IMAGE_FILTER_H
 #define NV_IMAGE_FILTER_H
 
 #include "nvimage.h"
-#include "../nvcore/Debug.h"
+#include "nvcore/Debug.h"
 
 namespace nv
 {

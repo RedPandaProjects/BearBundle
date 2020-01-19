@@ -1,4 +1,4 @@
-﻿// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
+// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -21,10 +21,10 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvimage\NormalMap.h"
-#include "nvimage\Filter.h"
-#include "nvimage\FloatImage.h"
-#include "nvimage\Image.h"
+#include "NormalMap.h"
+#include "Filter.h"
+#include "FloatImage.h"
+#include "Image.h"
 
 #include "nvmath/Color.inl"
 #include "nvmath/Vector.h"

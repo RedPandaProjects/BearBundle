@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -27,7 +27,7 @@
 
 //#include "nvimage/nvimage.h"
 
-#include "../nvmath/Color.h"
+#include "nvmath/Color.h"
 
 namespace nv
 {

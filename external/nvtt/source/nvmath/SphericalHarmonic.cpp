@@ -1,8 +1,8 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvmath\SphericalHarmonic.h"
+#include "SphericalHarmonic.h"
 
-#include "nvmath\Vector.h"
+#include "Vector.h"
 
 using namespace nv;
 

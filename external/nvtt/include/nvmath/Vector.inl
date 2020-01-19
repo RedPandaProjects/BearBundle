@@ -1,12 +1,12 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_MATH_VECTOR_INL
 #define NV_MATH_VECTOR_INL
 
 #include "Vector.h"
-#include "../nvcore/Utils.h" // min, max
-#include "../nvcore/Hash.h" // hash
+#include "nvcore/Utils.h" // min, max
+#include "nvcore/Hash.h" // hash
 
 namespace nv
 {
@@ -405,8 +405,7 @@ namespace nv
     {
         return equal(v1.x, v2.x, epsilon) && equal(v1.y, v2.y, epsilon);
     }
-#undef min
-#undef max
+
     inline Vector2 min(Vector2::Arg a, Vector2::Arg b)
     {
         return Vector2(min(a.x, b.x), min(a.y, b.y));

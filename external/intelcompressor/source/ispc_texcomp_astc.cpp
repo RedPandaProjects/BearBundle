@@ -16,8 +16,11 @@
 #include "BearCore.hpp"
 #include "ispc_texcomp.h"
 #include "kernel_astc_ispc.h"
+#include "ispc_struct.h"
 #include <algorithm>
 #include <limits>
+#define min(a,b) ((a)<(b))?(a):(b)
+#define max(a,b) ((a)<(b))?(b):(a)
 void GetProfile_astc_fast(astc_enc_settings* settings, int block_width, int block_height)
 {
     settings->block_width = block_width;
@@ -478,7 +481,7 @@ void CompressBlocksASTC(const rgba_surface* src, uint8_t* dst, astc_enc_settings
     int tex_width = src->width / settings->block_width;
     int programCount = get_programCount();
 
-	BearCore::BearVector<float> block_scores; block_scores.resize(tex_width * src->height / settings->block_height);
+	BearVector<float> block_scores; block_scores.resize(tex_width * src->height / settings->block_height);
 
     for (int yy = 0; yy < src->height / settings->block_height; yy++)
     for (int xx = 0; xx < tex_width; xx++)
@@ -488,8 +491,8 @@ void CompressBlocksASTC(const rgba_surface* src, uint8_t* dst, astc_enc_settings
 
     int mode_list_size = 3334;
     int list_size = programCount;
-	BearCore::BearVector<uint64_t> mode_lists; mode_lists.resize(list_size * mode_list_size);
-	BearCore::BearVector<uint32_t> mode_buffer; mode_buffer.resize(programCount * settings->fastSkipTreshold);
+	BearVector<uint64_t> mode_lists; mode_lists.resize(list_size * mode_list_size);
+	BearVector<uint32_t> mode_buffer; mode_buffer.resize(programCount * settings->fastSkipTreshold);
 
     for (int yy = 0; yy < src->height / settings->block_height; yy++)
     for (int _x = 0; _x < (tex_width + programCount - 1) / programCount; _x++)

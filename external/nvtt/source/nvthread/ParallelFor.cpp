@@ -1,9 +1,9 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
-#include "nvthread\ParallelFor.h"
-#include "nvthread\Thread.h"
-#include "nvthread\Atomic.h"
-#include "nvthread\ThreadPool.h"
+#include "ParallelFor.h"
+#include "Thread.h"
+#include "Atomic.h"
+#include "ThreadPool.h"
 
 #include "nvcore/Utils.h" // toI32
 

@@ -1,7 +1,7 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
 #include "Memory.h"
-#include "nvcore\Debug.h"
+#include "Debug.h"
 
 #include <stdlib.h>
 

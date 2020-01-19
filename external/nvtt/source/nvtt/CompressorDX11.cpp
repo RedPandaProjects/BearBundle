@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -22,16 +22,16 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvtt\CompressorDX11.h"
+#include "CompressorDX11.h"
 
-#include "nvtt\nvtt.h"
-#include "nvtt\CompressionOptions.h"
+#include "nvtt.h"
+#include "CompressionOptions.h"
 #include "nvimage/ColorBlock.h"
 #include "nvmath/Half.h"
 #include "nvmath/Vector.inl"
 
-#include "../bc6h/zoh.h"
-#include "../bc7/avpcl.h"
+#include "bc6h/zoh.h"
+#include "bc7/avpcl.h"
 
 #include <string.h> // memset
 

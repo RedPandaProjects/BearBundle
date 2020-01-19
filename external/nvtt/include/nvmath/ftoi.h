@@ -1,10 +1,10 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
 #pragma once
 #ifndef NV_MATH_FTOI_H
 #define NV_MATH_FTOI_H
 
-#include "../nvmath/nvmath.h"
+#include "nvmath/nvmath.h"
 
 #include <math.h>
 

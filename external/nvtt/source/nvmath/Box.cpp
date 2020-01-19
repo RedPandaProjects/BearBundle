@@ -1,7 +1,7 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvmath\Box.h"
-#include "nvmath\Box.inl"
+#include "Box.h"
+#include "Box.inl"
 //#include "Sphere.h"
 
 using namespace nv;

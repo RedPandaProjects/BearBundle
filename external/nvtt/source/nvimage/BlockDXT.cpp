@@ -1,4 +1,4 @@
-﻿// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
+// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -21,16 +21,16 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvimage\BlockDXT.h"
-#include "nvimage\ColorBlock.h"
+#include "BlockDXT.h"
+#include "ColorBlock.h"
 
 #include "nvcore/Stream.h"
 #include "nvcore/Utils.h" // swap
 #include "nvmath/Half.h"
 #include "nvmath/Vector.inl"
 
-#include "../bc6h/zoh.h"
-#include "../bc7/avpcl.h"
+#include "bc6h/zoh.h"
+#include "bc7/avpcl.h"
 
 
 using namespace nv;

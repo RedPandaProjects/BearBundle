@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -22,12 +22,9 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#ifdef WINDOWS
-#pragma warning(disable: 4530)
-#endif
-#include "nvtt/BlockCompressor.h"
-#include "nvtt/OutputOptions.h"
-#include "nvtt/TaskDispatcher.h"
+#include "BlockCompressor.h"
+#include "OutputOptions.h"
+#include "TaskDispatcher.h"
 
 #include "nvimage/Image.h"
 #include "nvimage/ColorBlock.h"
@@ -36,6 +33,8 @@
 #include "nvmath/Vector.inl"
 
 #include "nvcore/Memory.h"
+
+#include <new> // placement new
 
 
 using namespace nv;

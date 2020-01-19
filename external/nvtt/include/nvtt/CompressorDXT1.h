@@ -1,4 +1,4 @@
-﻿
+
 namespace nv {
 
     class Color32;

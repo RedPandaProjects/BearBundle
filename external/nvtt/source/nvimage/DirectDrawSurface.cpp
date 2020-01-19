@@ -1,4 +1,4 @@
-﻿// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
+// Copyright NVIDIA Corporation 2007 -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -21,11 +21,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvimage\DirectDrawSurface.h"
-#include "nvimage\ColorBlock.h"
-#include "nvimage\Image.h"
-#include "nvimage\BlockDXT.h"
-#include "nvimage\PixelFormat.h"
+#include "DirectDrawSurface.h"
+#include "ColorBlock.h"
+#include "Image.h"
+#include "BlockDXT.h"
+#include "PixelFormat.h"
 
 #include "nvcore/Debug.h"
 #include "nvcore/Utils.h" // max

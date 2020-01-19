@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_MATH_MATRIX_INL
@@ -794,7 +794,7 @@ v1 = FXVector3.Cross(v3, v2);
 v1.Normalize();
 
 Matrix R = Matrix::Identity;
-R[0, 0] = v3.X; // Not sure this is in the correct order...
+R[0, 0] = v3.X;�// Not sure this is in the correct order...
 R[1, 0] = v3.Y;
 R[2, 0] = v3.Z;
 R[0, 1] = v1.X;

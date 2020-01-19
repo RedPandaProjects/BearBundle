@@ -1,7 +1,7 @@
-﻿
-#include "nvtt\CompressorDXT1.h"
-#include "nvtt\SingleColorLookup.h"
-#include "nvtt\ClusterFit.h"
+
+#include "CompressorDXT1.h"
+#include "SingleColorLookup.h"
+#include "ClusterFit.h"
 
 #include "nvimage/ColorBlock.h"
 #include "nvimage/BlockDXT.h"

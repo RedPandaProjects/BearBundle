@@ -1,8 +1,8 @@
-﻿// This code is in the public domain -- Ignacio Castaño <castano@gmail.com>
+// This code is in the public domain -- Ignacio Castaño <castano@gmail.com>
 
-#include "nvmath\Fitting.h"
-#include "nvmath\Vector.inl"
-#include "nvmath\Plane.inl"
+#include "Fitting.h"
+#include "Vector.inl"
+#include "Plane.inl"
 
 #include "nvcore/Array.inl"
 #include "nvcore/Utils.h" // max, swap

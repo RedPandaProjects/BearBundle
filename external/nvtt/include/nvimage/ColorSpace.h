@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- jim@tilander.org
+// This code is in the public domain -- jim@tilander.org
 
 #pragma once
 #ifndef NV_IMAGE_COLORSPACE_H

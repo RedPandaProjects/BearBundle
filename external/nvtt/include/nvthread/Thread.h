@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
 #pragma once
 #ifndef NV_THREAD_THREAD_H
@@ -6,7 +6,7 @@
 
 #include "nvthread.h"
 
-#include "../nvcore/Ptr.h" // AutoPtr
+#include "nvcore/Ptr.h" // AutoPtr
 
 namespace nv
 {

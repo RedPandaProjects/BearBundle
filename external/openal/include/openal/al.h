@@ -20,7 +20,7 @@
  #endif
 #endif
 
-#if defined(_WIN32)
+#if defined(_WIN32) &&! defined(MINGW)
  #define AL_APIENTRY __cdecl
 #else
  #define AL_APIENTRY

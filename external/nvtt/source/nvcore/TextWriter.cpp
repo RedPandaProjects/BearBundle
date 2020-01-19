@@ -1,6 +1,6 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
-#include "nvcore\TextWriter.h"
+#include "TextWriter.h"
 
 using namespace nv;
 

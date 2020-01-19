@@ -1,16 +1,12 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
 #pragma once
 #ifndef NV_CORE_H
 #define NV_CORE_H
-#ifdef WINDOWS
-#pragma warning(disable: 4201 4100 4458 4456 4189 4701 4244 4703 4503 4505 4702 4091 4740 4457 4389 4456 4127 4312)
-#elif LINUX
 
-#endif
 // Function linkage
 #if NVCORE_SHARED
-#ifdef  NVCORE_EXPORTS
+#ifdef NVCORE_EXPORTS
 #define NVCORE_API DLL_EXPORT
 #define NVCORE_CLASS DLL_EXPORT_CLASS
 #else
@@ -24,7 +20,7 @@
 
 
 // Platform definitions
-#include "posh.h"
+#include <posh.h>
 
 // OS:
 // NV_OS_WIN32
@@ -59,6 +55,7 @@
 #elif defined POSH_OS_MINGW
 #   define NV_OS_MINGW 1
 #   define NV_OS_WIN32 1
+#   define NV_OS_WIN64 1
 #elif defined POSH_OS_OSX
 #   define NV_OS_DARWIN 1
 #   define NV_OS_UNIX 1
@@ -166,7 +163,7 @@
 
 
 // cmake config
-#include "../nvconfig.h"
+#include "nvconfig.h"
 
 
 // Type definitions:
@@ -206,10 +203,15 @@ typedef uint32      uint;
 
 // Disable dynamic allocation on the heap. 
 // See Prohibiting Heap-Based Objects in More Effective C++.
+#if POSH_COMPILER_MSVC 
 #define NV_FORBID_HEAPALLOC() \
-    private: 
- /*   void *operator new(size_t size); \
-    void *operator new[](size_t size)*/
+    private: \
+    void *operator new(size_t size); \
+    void *operator new[](size_t size)
+#else
+#define NV_FORBID_HEAPALLOC()
+#endif
+
     //static void *operator new(size_t size); 
     //static void *operator new[](size_t size);
 

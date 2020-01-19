@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 /** @file Filter.cpp
  * @brief Image filters.
@@ -33,7 +33,7 @@
  * http://www.dspguide.com/ch16.htm
  */
 
-#include "nvimage\Filter.h"
+#include "Filter.h"
 
 #include "nvmath/Vector.h" // Vector4
 #include "nvcore/Utils.h" // swap

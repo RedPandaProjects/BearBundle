@@ -1,4 +1,4 @@
-﻿
+
 /*
 For more info:
 http://developer.valvesoftware.com/wiki/VTF

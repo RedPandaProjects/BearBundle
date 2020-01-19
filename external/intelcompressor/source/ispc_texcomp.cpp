@@ -16,6 +16,7 @@
 
 #include "ispc_texcomp.h"
 #include "kernel_ispc.h"
+#include "ispc_struct.h"
 #include "BearCore.hpp"
 void GetProfile_ultrafast(bc7_enc_settings* settings)
 {
@@ -435,7 +436,7 @@ void ReplicateBorders(rgba_surface* dst_slice, const rgba_surface* src_tex, int 
         void* dst = &dst_slice->ptr[dst_slice->stride * y + bytes_per_pixel * x];
         void* src = &src_tex->ptr[src_tex->stride * yy + bytes_per_pixel * xx];
 
-		BearCore::bear_copy(dst, src, bytes_per_pixel);
+		bear_copy(dst, src, bytes_per_pixel);
     }
 }
 

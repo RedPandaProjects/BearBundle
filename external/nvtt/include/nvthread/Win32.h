@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
 // Never include this from a header file.
 

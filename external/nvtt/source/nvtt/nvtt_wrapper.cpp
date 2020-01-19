@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -22,10 +22,10 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvtt\nvtt.h"
-#include "nvtt\nvtt_wrapper.h"
+#include "nvtt.h"
+#include "nvtt_wrapper.h"
 
-#include "nvtt\OutputOptions.h"
+#include "OutputOptions.h"
 
 // An OutputHandler that sets and calls function pointers, rather than
 // requiring interfaces to derive from OutputHandler itself

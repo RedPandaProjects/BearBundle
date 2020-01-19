@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 /*
 http://www.visgraf.impa.br/Courses/ip00/proj/Dithering1/floyd_steinberg_dithering.html
@@ -12,9 +12,9 @@ http://www.efg2.com/Lab/Library/ImageProcessing/DHALF.TXT
 @@ This code needs to be reviewed, I'm not sure it's correct.
 */
 
-#include "nvimage\Quantize.h"
-#include "nvimage\Image.h"
-#include "nvimage\PixelFormat.h"
+#include "Quantize.h"
+#include "Image.h"
+#include "PixelFormat.h"
 
 #include "nvmath/Color.h"
 #include "nvmath/Vector.inl"

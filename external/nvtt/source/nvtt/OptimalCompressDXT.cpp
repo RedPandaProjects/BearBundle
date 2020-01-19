@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -22,18 +22,18 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
-#include "nvtt\OptimalCompressDXT.h"
-#include "nvtt\SingleColorLookup.h"
+#include "OptimalCompressDXT.h"
+#include "SingleColorLookup.h"
 
-#include "nvimage/ColorBlock.h"
-#include "nvimage/BlockDXT.h"
+#include <nvimage/ColorBlock.h>
+#include <nvimage/BlockDXT.h>
 
-#include "nvmath/Color.h"
+#include <nvmath/Color.h>
 
-#include "nvcore/Utils.h" // swap
+#include <nvcore/Utils.h> // swap
 
-#include "limits.h"     // INT_MAX
-#include "float.h"      // FLT_MAX
+#include <limits.h>     // INT_MAX
+#include <float.h>      // FLT_MAX
 
 using namespace nv;
 using namespace OptimalCompress;

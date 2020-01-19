@@ -1,12 +1,12 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvimage\ImageIO.h"
-#include "nvimage\Image.h"
-#include "nvimage\FloatImage.h"
-#include "nvimage\TgaFile.h"
-#include "nvimage\PsdFile.h"
-#include "nvimage\DirectDrawSurface.h"
-#include "nvimage\PixelFormat.h"
+#include "ImageIO.h"
+#include "Image.h"
+#include "FloatImage.h"
+#include "TgaFile.h"
+#include "PsdFile.h"
+#include "DirectDrawSurface.h"
+#include "PixelFormat.h"
 
 #include "nvmath/Color.h"
 #include "nvmath/Half.h"
@@ -324,7 +324,7 @@ static bool savePPM(Stream & s, const Image * img)
     writer.writeString("255\n");
     for (uint i = 0; i < w * h; i++) {
         Color32 c = img->pixel(i);
-        s << (uint8_t&)c.r << (uint8_t&)c.g << (uint8_t&)c.b;
+        s << c.r << c.g << c.b;
     }
 
     return true;

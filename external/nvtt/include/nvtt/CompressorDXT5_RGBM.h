@@ -1,4 +1,4 @@
-﻿
+
 namespace nv {
 
     struct BlockDXT5;

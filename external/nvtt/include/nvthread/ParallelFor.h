@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
 #pragma once
 #ifndef NV_THREAD_PARALLELFOR_H

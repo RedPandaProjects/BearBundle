@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
 #ifndef NV_CORE_PTR_H
 #define NV_CORE_PTR_H

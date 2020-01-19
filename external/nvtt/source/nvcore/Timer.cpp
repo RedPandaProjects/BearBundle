@@ -1,6 +1,6 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
-#include "nvcore\Timer.h"
+#include "Timer.h"
 
 using namespace nv;
     

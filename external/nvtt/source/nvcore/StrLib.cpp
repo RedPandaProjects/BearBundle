@@ -1,43 +1,35 @@
-﻿// This code is in the public domain -- Ignacio Castaсo <castano@gmail.com>
+// This code is in the public domain -- Ignacio Casta�o <castano@gmail.com>
 
-#include "nvcore\StrLib.h"
+#include "StrLib.h"
 
 #include "Memory.h"
-#include "nvcore\Utils.h" // swap
+#include "Utils.h" // swap
 
 #include <math.h>   // log
 #include <stdio.h>  // vsnprintf
 #include <string.h> // strlen, strcmp, etc.
-#include "BearCore.hpp"
+
 #if NV_CC_MSVC
 #include <stdarg.h> // vsnprintf
 #endif
-#ifndef MINGW
-void nv::swap(StringBuilder& a, StringBuilder& b) {
-    swap(a.m_size, b.m_size);
-    swap(a.m_str, b.m_str);
-}
-void  nv::swap(String& a, String& b) {
-    swap(a.data, b.data);
-}
-#endif
+
 using namespace nv;
 
 namespace 
 {
     static char * strAlloc(uint size)
     {
-		return bear_new<char>(size);
+        return malloc<char>(size);
     }
 
     static char * strReAlloc(char * str, uint size)
     {
-        return bear_realloc(str, size);
+        return realloc<char>(str, size);
     }
 
     static void strFree(const char * str)
     {
-        return  bear_free(str);
+        return free<char>(str);
     }
 
     /*static char * strDup( const char * str )
@@ -139,7 +131,7 @@ void nv::strCpy(char * dst, uint size, const char * src)
     strcpy_s(dst, size, src);
 #else
     NV_UNUSED(size);
-    strcpy_s(dst,size, src);
+    strcpy(dst, src);
 #endif
 }
 
@@ -151,7 +143,7 @@ void nv::strCpy(char * dst, uint size, const char * src, uint len)
     strncpy_s(dst, size, src, len);
 #else
     int n = min(len+1, size);
-    strncpy_s(dst, size,src, n);
+    strncpy(dst, src, n);
     dst[n-1] = '\0';
 #endif
 }
@@ -572,7 +564,10 @@ char * StringBuilder::release()
 }
 
 // Swap strings.
-
+void nv::swap(StringBuilder & a, StringBuilder & b) {
+    swap(a.m_size, b.m_size);
+    swap(a.m_str, b.m_str);
+}
 
 
 /// Get the file name from a path.
@@ -752,7 +747,7 @@ void String::release()
         const uint16 count = getRefCount();
         setRefCount(count - 1);
         if (count - 1 == 0) {
-			BearMemory::Free((void*)(data - 2));
+            free(data - 2);
             data = NULL;
         }
     }
@@ -760,7 +755,7 @@ void String::release()
 
 void String::allocString(const char * str, uint len)
 {
-    const char * ptr = bear_alloc<char>(2 + len + 1);
+    const char * ptr = malloc<char>(2 + len + 1);
 
     setData( ptr );
     setRefCount( 0 );
@@ -772,3 +767,6 @@ void String::allocString(const char * str, uint len)
     const_cast<char *>(data)[len] = '\0';
 }
 
+void nv::swap(String & a, String & b) {
+    swap(a.data, b.data);
+}

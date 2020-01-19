@@ -1,11 +1,11 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #ifndef NV_THREAD_ATOMIC_H
 #define NV_THREAD_ATOMIC_H
 
 #include "nvthread.h"
 
-#include "../nvcore/Debug.h"
+#include "nvcore/Debug.h"
 
 
 #if NV_CC_MSVC
@@ -43,7 +43,7 @@ extern "C"
 #include "libkern/OSAtomic.h"
 #endif
 */
-
+#include <inttypes.h>
 namespace nv {
 
     // Load and stores.

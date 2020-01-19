@@ -1,8 +1,8 @@
-﻿#include "nvtt\CompressorDXT5_RGBM.h"
-#include "nvtt\CompressorDXT1.h"
+#include "CompressorDXT5_RGBM.h"
+#include "CompressorDXT1.h"
 
-#include "nvtt\OptimalCompressDXT.h"
-#include "nvtt\QuickCompressDXT.h"
+#include "OptimalCompressDXT.h"
+#include "QuickCompressDXT.h"
 
 #include "nvimage/ColorBlock.h"
 #include "nvimage/BlockDXT.h"

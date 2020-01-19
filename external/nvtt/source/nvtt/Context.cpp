@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2008-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -21,24 +21,22 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
-#ifdef WINDOWS
-#pragma warning(disable: 4530)
-#endif
-#include "nvtt\Context.h"
 
-#include "nvtt\nvtt.h"
+#include "Context.h"
 
-#include "nvtt\InputOptions.h"
-#include "nvtt\CompressionOptions.h"
-#include "nvtt\OutputOptions.h"
-#include "nvtt\Surface.h"
+#include "nvtt.h"
 
-#include "nvtt\CompressorDX9.h"
-#include "nvtt\CompressorDX10.h"
-#include "nvtt\CompressorDX11.h"
-#include "nvtt\CompressorRGB.h"
-#include "../cuda/CudaUtils.h"
-#include "../cuda/CudaCompressorDXT.h"
+#include "InputOptions.h"
+#include "CompressionOptions.h"
+#include "OutputOptions.h"
+#include "Surface.h"
+
+#include "CompressorDX9.h"
+#include "CompressorDX10.h"
+#include "CompressorDX11.h"
+#include "CompressorRGB.h"
+#include "cuda/CudaUtils.h"
+#include "cuda/CudaCompressorDXT.h"
 
 #include "nvimage/DirectDrawSurface.h"
 #include "nvimage/ColorBlock.h"

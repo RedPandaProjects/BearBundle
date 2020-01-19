@@ -13,16 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////
-#ifdef WINDOWS
+#ifdef MSVC
 #pragma warning(disable: 4244 4189 4305 4056 4018 4701 4530 4702)
-#elif LINUX
-
 #endif
 #include "BearCore.hpp"
+#ifdef MSVC
 #include <amp_math.h>
+#endif
 #include "ispc_texcomp.h"
 #include <algorithm>
-
+#define min(a,b) ((a)<(b))?(a):(b)
+#define max(a,b) ((a)<(b))?(b):(a)
 extern "C" void copy_to_float(float&fl, uint32 c);
 ///////////////////////////
 //   generic helpers

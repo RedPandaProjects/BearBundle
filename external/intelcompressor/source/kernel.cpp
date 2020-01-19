@@ -13,15 +13,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////
-#ifdef WINDOWS
-#pragma warning(disable: 4244 4189 4305 4056 4018 4701 4530)
-#elif LINUX
-
+#ifdef MSVC
+#pragma warning(disable: 4244 4189 4305 4056 4018 4701 4530 4702)
 #endif
 #include "BearCore.hpp"
+#ifdef MSVC
 #include <amp_math.h>
+#endif
 #include <math.h>
-
+#define min(a,b) ((a)<(b))?(a):(b)
+#define max(a,b) ((a)<(b))?(b):(a)
 extern "C" void copy_to_float(float&fl,uint32 c);
 ///////////////////////////
 //   generic helpers
@@ -73,11 +74,11 @@ inline int pow2(int x)
 
 inline float clamp(float v, int a, int b)
 {
-    return BearCore::bear_clampr(v, (float)a, (float)b);
+    return BearMath::clamp(v, (float)a, (float)b);
 }
 inline float clamp(float v, float a, float b)
 {
-	return BearCore::bear_clampr(v, a, b);
+	return BearMath::clamp(v, a, b);
 }
 // the following helpers isolate performance warnings
 
@@ -1046,11 +1047,13 @@ void ep_quant1(int qep[], float ep[],  int mode)
 {
 	int qep_b[16];
         
-    for ( int b=0; b<2; b++)
-	for ( int i=0; i<8; i++)
+    for (int b = 0; b < 2; b++)
     {
-        int v = ((int)((ep[i]/255.f*127.f-b)/2+0.5))*2+b;
-		qep_b[b*8+i] = clamp(v, b, 126+b);
+        for (int i = 0; i < 8; i++)
+        {
+            int v = ((int)((ep[i] / 255.f * 127.f - b) / 2 + 0.5)) * 2 + b;
+            qep_b[b * 8 + i] = clamp(v, b, 126 + b);
+        }
     }
     
 	// dequant
@@ -1060,13 +1063,16 @@ void ep_quant1(int qep[], float ep[],  int mode)
 
 	float err0 = 0.f;
     float err1 = 0.f;
-    for ( int j = 0; j < 2; j++)
-    for ( int p = 0; p < 3; p++)
+    for (int j = 0; j < 2; j++)
     {
-        err0 += sq(ep[j * 4 + p] - ep_b[0 + j * 4 + p]);
-        err1 += sq(ep[j * 4 + p] - ep_b[8 + j * 4 + p]);
-    }
 
+
+        for (int p = 0; p < 3; p++)
+        {
+            err0 += sq(ep[j * 4 + p] - ep_b[0 + j * 4 + p]);
+            err1 += sq(ep[j * 4 + p] - ep_b[8 + j * 4 + p]);
+        }
+    }
 	for ( int i=0; i<8; i++)
 		qep[i] = (err0<err1) ? qep_b[0+i] : qep_b[8+i];
 

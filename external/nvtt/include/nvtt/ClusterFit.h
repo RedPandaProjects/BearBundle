@@ -1,4 +1,4 @@
-﻿/* -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
 
     Copyright (c) 2006 Simon Brown                          si@sjbrown.co.uk
     Copyright (c) 2006 Ignacio Castano                      icastano@nvidia.com
@@ -27,9 +27,9 @@
 #ifndef NVTT_CLUSTERFIT_H
 #define NVTT_CLUSTERFIT_H
 
-#include "../nvmath/SimdVector.h"
-#include "../nvmath/Vector.h"
-#include "../nvcore/Memory.h"
+#include "nvmath/SimdVector.h"
+#include "nvmath/Vector.h"
+#include "nvcore/Memory.h"
 
 // Use SIMD version if altivec or SSE are available.
 #define NVTT_USE_SIMD (NV_USE_ALTIVEC || NV_USE_SSE)

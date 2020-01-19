@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
+// Copyright (c) 2009-2011 Ignacio Castano <castano@gmail.com>
 // Copyright (c) 2007-2009 NVIDIA Corporation -- Ignacio Castano <icastano@nvidia.com>
 // 
 // Permission is hereby granted, free of charge, to any person
@@ -26,8 +26,8 @@
 #define NV_TT_COMPRESSIONOPTIONS_H
 
 #include "nvtt.h"
-#include "../nvmath/Vector.h"
-#include "../nvcore/StrLib.h"
+#include "nvmath/Vector.h"
+#include "nvcore/StrLib.h"
 
 namespace nvtt
 {

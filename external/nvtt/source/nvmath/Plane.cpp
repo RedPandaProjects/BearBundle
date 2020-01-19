@@ -1,8 +1,8 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvmath\Plane.h"
-#include "nvmath\Plane.inl"
-#include "nvmath\Matrix.inl"
+#include "Plane.h"
+#include "Plane.inl"
+#include "Matrix.inl"
 
 namespace nv
 {

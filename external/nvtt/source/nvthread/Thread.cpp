@@ -1,9 +1,9 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
-#include "nvthread\Thread.h"
+#include "Thread.h"
 
 #if NV_OS_WIN32
-    #include "nvthread\Win32.h"
+    #include "Win32.h"
 #elif NV_OS_USE_PTHREAD
     #include <pthread.h>
     #include <unistd.h> // usleep
@@ -61,14 +61,17 @@ static void setThreadName(DWORD dwThreadID, const char* threadName)
     info.szName = threadName;
     info.dwThreadID = dwThreadID;
     info.dwFlags = 0;
-
+#ifndef POSH_COMPILER_GCC
     __try
     {
+#endif
         RaiseException( MS_VC_EXCEPTION, 0, sizeof(info)/sizeof(ULONG_PTR), (ULONG_PTR*)&info );
+#ifndef POSH_COMPILER_GCC
     }
     __except(EXCEPTION_EXECUTE_HANDLER)
     {
     }
+#endif
 }
 
 

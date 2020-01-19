@@ -1,12 +1,12 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
 #pragma once
 #ifndef NV_MATH_H
 #define NV_MATH_H
 
-#include "../nvcore/nvcore.h"
-#include "../nvcore/Debug.h"   // nvDebugCheck
-#include "../nvcore/Utils.h"   // max, clamp
+#include "nvcore/nvcore.h"
+#include "nvcore/Debug.h"   // nvDebugCheck
+#include "nvcore/Utils.h"   // max, clamp
 
 #include <math.h>
 
@@ -170,7 +170,7 @@ namespace nv
 
     inline bool isFinite(const float f)
     {
-#ifdef NV_OS_MINGW
+#if NV_OS_MINGW
         return finitef(f);
 #elif NV_OS_WIN32 || NV_OS_XBOX
         return _finite(f) != 0;
@@ -187,8 +187,8 @@ namespace nv
 
     inline bool isNan(const float f)
     {
-#ifdef NV_OS_MINGW
-        return isnanf(f);
+#if NV_OS_MINGW
+        return f == std::numeric_limits<float>::quiet_NaN();
 #elif NV_OS_WIN32 || NV_OS_XBOX
         return _isnan(f) != 0;
 #elif NV_OS_DARWIN || NV_OS_FREEBSD || NV_OS_NETBSD || NV_OS_OPENBSD || NV_OS_ORBIS
@@ -223,7 +223,7 @@ namespace nv
 
     inline float frac(float f)
     {
-        return f -static_cast<float>( floor(f));
+        return f - floorf(f);
     }
 
     inline float floatRound(float f)

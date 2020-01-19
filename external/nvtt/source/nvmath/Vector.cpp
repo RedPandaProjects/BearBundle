@@ -1,4 +1,4 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvmath\Vector.h"
-#include "nvmath\Vector.inl"
+#include "Vector.h"
+#include "Vector.inl"

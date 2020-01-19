@@ -1,4 +1,4 @@
-﻿#ifndef NV_CORE_H
+#ifndef NV_CORE_H
 #error "Do not include this file directly."
 #endif
 

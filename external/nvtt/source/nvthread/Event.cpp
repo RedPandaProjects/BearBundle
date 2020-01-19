@@ -1,9 +1,9 @@
-﻿// This code is in the public domain -- castano@gmail.com
+// This code is in the public domain -- castano@gmail.com
 
-#include "nvthread\Event.h"
+#include "Event.h"
 
 #if NV_OS_WIN32
-#include "nvthread\Win32.h"
+#include "Win32.h"
 #elif NV_OS_USE_PTHREAD
 #include <pthread.h>
 #endif

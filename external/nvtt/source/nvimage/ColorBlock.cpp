@@ -1,8 +1,8 @@
-﻿// This code is in the public domain -- castanyo@yahoo.es
+// This code is in the public domain -- castanyo@yahoo.es
 
-#include "nvimage\ColorBlock.h"
-#include "nvimage\Image.h"
-#include "nvimage\FloatImage.h"
+#include "ColorBlock.h"
+#include "Image.h"
+#include "FloatImage.h"
 
 #include "nvmath/Box.h"
 #include "nvmath/Vector.inl"
