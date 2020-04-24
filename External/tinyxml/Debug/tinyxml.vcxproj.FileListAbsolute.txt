@@ -1,0 +1,2 @@
+D:\GameDev\Engine\SourceEngine\CSEngine\Source\Debug\tinyxml.pdb
+D:\GameDev\Engine\SourceEngine\CSEngine\Source\BearBundle\External\tinyxml\Debug\tinyxml.pdb

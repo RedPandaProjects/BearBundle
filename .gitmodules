@@ -1,21 +1,12 @@
-[submodule "bearcore"]
-	path = bearcore
-	url = https://github.com/BearIvan/bearcore
-[submodule "beargraphics"]
-	path = beargraphics
-	url = https://github.com/TheBearProject/beargraphics
-[submodule "bearui"]
-	path = bearui
-	url = https://github.com/TheBearProject/bearui
-[submodule "bearsound"]
-	path = bearsound
-	url = https://github.com/TheBearProject/bearsound
-[submodule "bearrender/beardirectx"]
-	path = bearrender/beardirectx
-	url = https://github.com/TheBearProject/beardirectx
-[submodule "bearrender/bearvulkan"]
-	path = bearrender/bearvulkan
-	url = https://github.com/TheBearProject/bearvulkan
-[submodule "bearrender/bearopengl"]
-	path = bearrender/bearopengl
-	url = https://github.com/TheBearProject/bearopengl
+[submodule "BearCore"]
+	path = BearCore
+	url = https://github.com/TheBearProject/BearCore
+[submodule "BearGraphics"]
+	path = BearGraphics
+	url = https://github.com/TheBearProject/BearGraphics
+[submodule "BearRender/BearDirectx"]
+	path = bearrender/BearDirectx
+	url = https://github.com/TheBearProject/BearDirectx
+[submodule "BearRender/BearVulkan"]
+	path = bearrender/BearVulkan
+	url = https://github.com/TheBearProject/BearVulkan
