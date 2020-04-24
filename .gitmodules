@@ -5,8 +5,8 @@
 	path = BearGraphics
 	url = https://github.com/TheBearProject/BearGraphics
 [submodule "BearRender/BearDirectx"]
-	path = bearrender/BearDirectx
+	path = BearRender/BearDirectx
 	url = https://github.com/TheBearProject/BearDirectx
 [submodule "BearRender/BearVulkan"]
-	path = bearrender/BearVulkan
+	path = BearRender/BearVulkan
 	url = https://github.com/TheBearProject/BearVulkan
