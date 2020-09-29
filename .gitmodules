@@ -10,3 +10,6 @@
 [submodule "BearRender/BearVulkan"]
 	path = BearRender/BearVulkan
 	url = https://github.com/TheBearProject/BearVulkan
+[submodule "BearUI"]
+	path = BearUI
+	url = https://github.com/TheBearProject/BearUI
