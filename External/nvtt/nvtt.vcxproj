@@ -383,6 +383,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;$(BearBundle)External\Public\Nvtt;$(BearBundle)External\Public\Nvtt\nvcore;$(BearBundle)External\Public\Nvtt\nvimage;$(BearBundle)External\Public\Nvtt\nvmath;$(BearBundle)External\Public\Nvtt\nvthread;$(BearBundle)External\Public\Nvtt\nvtt;$(BearBundle)External\Public\Nvtt\squish;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -443,6 +444,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;$(BearBundle)External\Public\Nvtt;$(BearBundle)External\Public\Nvtt\nvcore;$(BearBundle)External\Public\Nvtt\nvimage;$(BearBundle)External\Public\Nvtt\nvmath;$(BearBundle)External\Public\Nvtt\nvthread;$(BearBundle)External\Public\Nvtt\nvtt;$(BearBundle)External\Public\Nvtt\squish;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
