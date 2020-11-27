@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Label="PropertySheets" />
+   <ImportGroup Label="PropertySheets">
+    <Import Project="..\BearBundle.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <Bundle>$(SolutionDir)BearBundle\</Bundle>
-    <BearRender>$(SolutionDir)BearBundle\BearRender\</BearRender>
-    <RenderExternal>$(SolutionDir)BearBundle\BearRender\External\</RenderExternal>
+    <BearRender>$(BearBundle)BearRender\</BearRender>
+    <RenderExternal>$(BearBundle)BearRender\External\</RenderExternal>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Bundle)BearCore;$(Bundle)BearGraphics;$(RenderExternal)Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BearBundle)BearCore;$(BearBundle)BearGraphics;$(RenderExternal)Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(RenderExternal)Libraries\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(RenderExternal)Libraries\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <BuildMacro Include="Bundle">
-      <Value>$(Bundle)</Value>
-    </BuildMacro>
     <BuildMacro Include="BearRender">
       <Value>$(BearRender)</Value>
     </BuildMacro>
