@@ -14,7 +14,7 @@
 // limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <amp_math.h>
+//#include <amp_math.h>
 #include "IntelCompressor/ispc_texcomp.h"
 #include <algorithm>
 #include <assert.h>

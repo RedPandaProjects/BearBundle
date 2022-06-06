@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////
-#include <amp_math.h>
+//#include <amp_math.h>
 #include <math.h>
 #include <assert.h>
 #include <vector>
