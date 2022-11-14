@@ -53,6 +53,8 @@ extern "C" {
 #endif
 
 #if defined(HAVE_STBIMAGE)
+#   define STB_IMAGE_IMPLEMENTATION
+#   define STB_IMAGE_STATIC
 #   define STBI_NO_STDIO
 #   include <StbImage/stb_image.h>
 #endif
